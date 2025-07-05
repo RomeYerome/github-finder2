@@ -9,6 +9,41 @@ html,
 body {
   @apply bg-white dark:bg-gray-950;
 
+    /* Hamburger Menu */
+    .hamburger {
+        @apply relative h-6 w-6 cursor-pointer transition duration-250;
+    }
+
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+        @apply absolute w-6 h-0.5 top-0 left-0 bg-white transition-all duration-500 transform rotate-0;
+    }
+
+    .hamburger-middle {
+        @apply translate-y-[7px];
+    }
+
+    .hamburger-bottom {
+        @apply translate-y-[14px];
+    }
+
+    .open {
+        @apply transform rotate-90;
+    }
+    .open {
+        &.hamburger-top {
+            @apply rotate-45 translate-y-1.5 translate-x-1.5;
+        }
+        &.hamburger-middle {
+            @apply hidden;
+        }
+        &.hamburger-bottom {
+            @apply -rotate-45 translate-y-[6px] translate-x-[6px];
+        }
+    }
+    
+
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
