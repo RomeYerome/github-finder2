@@ -9,6 +9,7 @@ import {
 export default [
     layout('routes/layout/Layout.tsx', [
         index('routes/Home.tsx'),
+        route('about', 'routes/About.tsx'),
         route('*', 'routes/NotFound.tsx'),
     ]),
 ] satisfies RouteConfig

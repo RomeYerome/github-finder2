@@ -1,11 +1,9 @@
 import { Outlet, isRouteErrorResponse, Link } from 'react-router'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
+import Navbar from '../../components/layout/Navbar'
+import Footer from '../../components/layout/Footer'
 
 const layout: React.FC = () => {
-    return (
-                <Outlet />
-    )
+    return <Outlet />
 }
 
 export function ErrorBoundary({ error }: { error: unknown }) {
@@ -25,31 +23,25 @@ export function ErrorBoundary({ error }: { error: unknown }) {
     }
 
     return (
-        <>
-            <Navbar />
-            <main>
-                <div className=" flex items-center justify-center bg-gray-100">
-                    <div className="text-center">
-                        <h1 className="text-6xl font-bold text-gray-800 mb-4">
-                            {message}
-                        </h1>
-                        <p className="text-xl text-gray-600 mb-8">{details}</p>
-                        {stack && (
-                            <pre className="w-full p-4 overflow-x-auto">
-                                <code>{stack}</code>
-                            </pre>
-                        )}
-                        <Link
-                            to="/"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        >
-                            Go Home
-                        </Link>
-                    </div>
-                </div>
-            </main>
-            <Footer />
-        </>
+        <div className="flex-1 bg-gray-100 flex items-center justify-center">
+            <div className="text-center">
+                <h1 className="text-6xl font-bold text-gray-800 mb-4">
+                    {message}
+                </h1>
+                <p className="text-xl text-gray-600 mb-8">{details}</p>
+                {stack && (
+                    <pre className="w-full p-4 overflow-x-auto">
+                        <code>{stack}</code>
+                    </pre>
+                )}
+                <Link
+                    to="/"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                    Go Home
+                </Link>
+            </div>
+        </div>
     )
 }
 

@@ -9,7 +9,14 @@ html,
 body {
   @apply bg-white dark:bg-gray-950;
 
-    /* Hamburger Menu */
+    
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+
+/* Hamburger Menu */
     .hamburger {
         @apply relative h-6 w-6 cursor-pointer transition duration-250;
     }
@@ -44,7 +51,7 @@ body {
     }
     
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+
+.card {
+    @apply p-4 rounded-lg;
 }
