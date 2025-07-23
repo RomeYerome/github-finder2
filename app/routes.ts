@@ -11,5 +11,6 @@ export default [
         index('routes/Home.tsx'),
         route('about', 'routes/About.tsx'),
         route('*', 'routes/NotFound.tsx'),
+        ...prefix('user', [route(':username', 'routes/User.tsx')]),
     ]),
 ] satisfies RouteConfig

@@ -11,6 +11,7 @@ import {
 import type { Route } from './+types/root'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import Spinner from './components/shared/Spinner'
 import './app.css'
 
 // Contexts
@@ -43,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </head>
             <body className="flex flex-col min-h-screen">
                     <Navbar />
-                    <main className="flex-1 bg-gray-100 flex py-12">
+                    <main className="flex-1 flex py-12 container mx-auto">
                         {children}
                     </main>
                     <ScrollRestoration />
@@ -53,6 +54,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </html>
     )
 }
+
+
+
+// Render Spinner while the clientLoader is running
+export function HydrateFallback() {
+    return (
+        <div className="flex-1 container px-4 pb-12 mx-auto flex flex-col justify-center items-center">
+            <Spinner />
+        </div>
+    )
+}
+
+
+
+
 
 export default function App() {
     return <Outlet />

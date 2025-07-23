@@ -55,3 +55,35 @@ body {
 .card {
     @apply p-4 rounded-lg;
 }
+
+.btn {
+    @apply px-4 py-2 rounded-lg cursor-pointer font-semibold;
+}
+
+.btn-ghost {
+    @apply bg-transparent text-gray-600 border-2 border-gray-600 hover:bg-gray-600 hover:text-white ;
+}
+
+
+.badge {
+    @apply inline-block font-medium text-xs bg-gray-200 rounded-full p-1 px-2;
+
+    &.badge-success {
+        @apply  text-green-500;
+    }
+
+    &.badge-info {
+        @apply text-blue-800;
+    }
+    &.badge-warning {
+        @apply text-yellow-800;
+    }
+    &.badge-error {
+        @apply text-orange-800;
+    }
+
+    &.badge-lg {
+        @apply flex px-2 py-[2px] justify-between items-center w-16 text-xs;
+    }
+    
+}
