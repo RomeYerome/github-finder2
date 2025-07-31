@@ -1,3 +1,4 @@
+import { vercelPreset } from '@vercel/react-router/vite'
 import type { Config } from '@react-router/dev/config'
 
 export default {
@@ -5,4 +6,5 @@ export default {
     // Server-side render by default, to enable SPA mode set this to `false`
     ssr: false,
     appDirectory: 'app',
+    presets: [vercelPreset()],
 } satisfies Config
