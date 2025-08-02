@@ -57,7 +57,7 @@ body {
 }
 
 .btn {
-    @apply px-4 py-2 rounded-lg cursor-pointer font-semibold;
+    @apply px-4 py-2.5 rounded-lg cursor-pointer font-semibold;
 }
 
 .btn-ghost {

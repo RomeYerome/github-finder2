@@ -91,7 +91,7 @@ const UserSearch: React.FC = () => {
             <div>
                 <form onSubmit={handleSubmit}>
                     <div className="form-control">
-                        <div className="relative shadow-md">
+                        <div className="relative shadow-md ">
                             <input
                                 type="text"
                                 className="w-full p-2.5 pr-40 bg-gray-200 rounded-lg outline-0"
